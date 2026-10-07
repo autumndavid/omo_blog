@@ -56,3 +56,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+#
+
+defaults:
+  home:
+    heading: "My learning& life log"
+    subheading: "Trust the process"
