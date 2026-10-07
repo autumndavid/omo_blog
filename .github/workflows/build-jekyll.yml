@@ -1,0 +1,21 @@
+name: Build and Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build and Deploy
+        uses: jeffreytse/jekyll-deploy-action@v0.6.0
+        with:
+          provider: 'github'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'gh-pages'
